@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Punto 1</title>
+</head>
+	<style>
+	
+	body {
+  background-image: url("fondo.jpg");
+
+}
+		.a
+		{
+			width: 100px;
+			height: 100px;
+			background: #FF00FF;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			border-radius: 100px;
+			font-size: 40px;
+			text-align: center;
+			
+		}
+		.b
+		{
+			width: 80%;
+			height: 80%;
+			background: #FFB6C1;
+			position: absolute;
+			top: 10%;
+			left: 10%;
+			
+
+		}
+	</style>
+
+<body onload="cuadro()">
+	<div class="b"></div>
+
+	<div onmousedown="hola(event)" onclick="ro()" class="a" id="cu">Click</div>
+
+
+
+	<audio src="corto.mp3" id="au"></audio>
+
+	<script>
+		
+
+		function cuadro()
+		{
+			var numx=Math.floor((Math.random() * (70 - 20))+20);
+			var numy=Math.floor((Math.random() * (70 - 20))+20);
+
+			cu.style.top=numx+"%";
+			cu.style.left=numy+"%";
+		}
+
+		function hola()
+		{
+			console.log(cu.style.top);
+			console.log(cu.style.left);
+			numx=Math.floor((Math.random() * (70 - 20))+20);
+			numy=Math.floor((Math.random() * (70 - 20))+20);
+
+			cu.style.top=numx+"%";
+			cu.style.left=numy+"%";
+			au.play();	
+	
+		}
+
+
+
+	</script>
+</body>
+</html>
